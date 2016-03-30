@@ -26,7 +26,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasModerator">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isModeratorOf"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#PanelSessionProgramme"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Moderator"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ModeratorPerson"/>
     </owl:ObjectProperty>
     
 
@@ -34,7 +34,7 @@
     <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isModeratorOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isModeratorOf">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Moderator"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ModeratorPerson"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#PanelSessionProgramme"/>
     </owl:ObjectProperty>
     
@@ -189,10 +189,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GuestOfHonour -->
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GuestOfHonourPerson -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GuestOfHonour">
+    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GuestOfHonourPerson">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GuestOfHonourProgramme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GuestOfHonourProgramme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
     </owl:Class>
     
 
@@ -211,9 +219,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Moderator -->
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ModeratorPerson -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Moderator">
+    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ModeratorPerson">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
     </owl:Class>
     
@@ -235,9 +243,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Participant -->
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ParticipantPerson -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Participant">
+    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ParticipantPerson">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
     </owl:Class>
     
@@ -361,7 +369,7 @@
     <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Steve_Macdonald -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Steve_Macdonald">
-        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Moderator"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ModeratorPerson"/>
     </owl:NamedIndividual>
     
 
@@ -370,6 +378,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#academic001">
         <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#AcademicProgramme"/>
+        <hasScheduledDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-15T11:00:00</hasScheduledDate>
+        <hasTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sherlock Holmes and Science Fiction</hasTitle>
     </owl:NamedIndividual>
     
 
@@ -380,6 +390,26 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FilmScreeningProgramme"/>
         <hasScheduledDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-15T22:00:00</hasScheduledDate>
         <hasTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beyond</hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#film002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#film002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FilmScreeningProgramme"/>
+        <hasScheduledDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-14T24:00:00</hasScheduledDate>
+        <hasTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">War Of The Worlds-Goliath</hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#film003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#film003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FilmScreeningProgramme"/>
+        <hasScheduledDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-15T11:00:00</hasScheduledDate>
+        <hasTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suicide or Lulu and Me in a World Made for Two</hasTitle>
     </owl:NamedIndividual>
     
 
