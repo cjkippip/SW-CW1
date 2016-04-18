@@ -5,8 +5,14 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl"/>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Ontology1456999826312="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#15">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The 72nd World Science Fiction Convention (Worldcon), also known as Loncon 3, was held 14-18 August 2014 at ExCeL London in London, England. This is an ontology of this science fiction convention.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Author: Jie Cao
+ID: 27510964
+E-mail: jc3g15@soton.ac.uk</rdfs:comment>
+    </owl:Ontology>
     
 
 
@@ -21,12 +27,175 @@
     
 
 
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasBuilding -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasBuilding">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasLocation"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isBuildingOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#BuildingLocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasFloor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasFloor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasLocation"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isFloorOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FloorLocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasGuestOfHonour -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasGuestOfHonour">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasPerson"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isGuestOfHonourOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GuestOfHonourPerson"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programme hasGuestOfHonour Guests Of Honour.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasLocation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Location"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasModerator -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasModerator">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasPerson"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isModeratorOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#PanelSessionProgramme"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ModeratorPerson"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programme hasModerator Moderator</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasParticipant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasParticipant">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasPerson"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isParticipantOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ParticipantPerson"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programme hasParticipant Participant</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasPerson -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasPerson">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isPersonOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The property describes relation between programme and person. Programme hasPerson person.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasProgramme -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasProgramme">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#inTrack"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Track"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The property describes relation between programmes and tracks. Track hasProgramme Programme.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasRoom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasRoom">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasLocation"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isRoomOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#RoomLocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#inTrack -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#inTrack">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Track"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The property describes relation between programmes and tracks. Programme inTrack Track .</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isBuildingOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isBuildingOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isLocationOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#BuildingLocation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isFloorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isFloorOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isLocationOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FloorLocation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isGuestOfHonourOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isGuestOfHonourOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isPersonOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GuestOfHonourPerson"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guests of Honour isGuestOfHonourOf Programme.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isLocationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isLocationOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Location"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
     </owl:ObjectProperty>
     
 
@@ -34,8 +203,48 @@
     <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isModeratorOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isModeratorOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isPersonOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ModeratorPerson"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#PanelSessionProgramme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moderator isModeratorOf Programme</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isParticipantOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isParticipantOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isPersonOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ParticipantPerson"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Participant isParicipantOf Programme</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isPersonOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isPersonOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Person isPersonOf Programme.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isRoomOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isRoomOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isLocationOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#RoomLocation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
     </owl:ObjectProperty>
     
 
@@ -51,9 +260,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasGender -->
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#gender -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasGender">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#gender">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#personDataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -61,19 +271,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasProgrammeTimeLength -->
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasDate -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasProgrammeTimeLength">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasScheduledDate -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasScheduledDate">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#programmeDataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -81,11 +282,99 @@
     
 
 
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasTitle -->
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasDuration -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasTitle">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasDuration">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#programmeDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasEmail">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#personDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasID">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#personDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasLocName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasLocName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasTitleP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasTitleP">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#programmeDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasTitleT -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasTitleT">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#trackDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Track"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#personDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#personDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#personDataProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#programmeDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#programmeDataProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#trackDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#trackDataProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Track"/>
     </owl:DatatypeProperty>
     
 
@@ -101,66 +390,52 @@
     
 
 
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#AcademicProgramme -->
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#AuthorPerson -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#AcademicProgramme">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#AuthorPerson">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class contains the author of this ontology.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ArtProgramme -->
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#BothMPPerson -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ArtProgramme">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#BothMPPerson">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isModeratorOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#PanelSessionProgramme"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#isParticipantOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#PanelSessionProgramme"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A person who both moderates and participates in panel sessions</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Building -->
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#BuildingLocation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Building">
+    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#BuildingLocation">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Location"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ComicsProgramme -->
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FemaleParticipantPerson -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ComicsProgramme">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#CostumingProgramme -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#CostumingProgramme">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ExhibitsProgramme -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ExhibitsProgramme">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FanProgramme -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FanProgramme">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FilkProgramme -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FilkProgramme">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FemaleParticipantPerson">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ParticipantPerson"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#MaleParticipantPerson"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class contains female paticipants</rdfs:comment>
     </owl:Class>
     
 
@@ -168,23 +443,16 @@
     <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FilmScreeningProgramme -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FilmScreeningProgramme">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ScreeningProgramme"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#TVScreeningProgramme"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Floor -->
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FloorLocation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Floor">
+    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FloorLocation">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Location"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GamingProgramme -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GamingProgramme">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
     </owl:Class>
     
 
@@ -193,28 +461,94 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GuestOfHonourPerson">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class contains guests of honour</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GuestOfHonourProgramme -->
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#HonourReadingProgramme -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GuestOfHonourProgramme">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#HonourReadingProgramme">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ReadingProgramme"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasGuestOfHonour"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GuestOfHonourPerson"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reading by a guest of honour</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Location -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Location"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Location">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class contains locations. They are Building, Floor and Room.</rdfs:comment>
+    </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#MediaProgramme -->
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#LongProgramme -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#MediaProgramme">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#LongProgramme">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasDuration"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A programme item longer than 90 minutes</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#MaleParticipantPerson -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#MaleParticipantPerson">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ParticipantPerson"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class contains male paticipants</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#MixSexPanelSessionProgramme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#MixSexPanelSessionProgramme">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#PanelSessionProgramme"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasParticipant"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FemaleParticipantPerson"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#hasParticipant"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#MaleParticipantPerson"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A panel session with both male and female partcipatants.</rdfs:comment>
     </owl:Class>
     
 
@@ -223,14 +557,27 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ModeratorPerson">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class contains moderator</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#MusicProgramme -->
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#MoreThanOneTrackFilmScreeningProgramme -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#MusicProgramme">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#MoreThanOneTrackFilmScreeningProgramme">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FilmScreeningProgramme"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#inTrack"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Track"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A film screening that&apos;s part more than one track</rdfs:comment>
     </owl:Class>
     
 
@@ -271,6 +618,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class contains programmes.</rdfs:comment>
     </owl:Class>
     
 
@@ -283,25 +631,17 @@
     
 
 
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Room -->
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#RoomLocation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Room">
+    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#RoomLocation">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Location"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#SciencePanelSession -->
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ScreeningProgramme -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#SciencePanelSession">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#PanelSessionProgramme"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ScienceProgramme -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ScienceProgramme">
+    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ScreeningProgramme">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
     </owl:Class>
     
@@ -310,7 +650,7 @@
     <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#TVScreeningProgramme -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#TVScreeningProgramme">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ScreeningProgramme"/>
     </owl:Class>
     
 
@@ -319,30 +659,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Track">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#WOOFAProgramme -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#WOOFAProgramme">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#WorkshopProgramme -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#WorkshopProgramme">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#YoungAdultProgramme -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#YoungAdultProgramme">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class contains tracks. There are 7 tracks: 1.Academic 2.Science 3.Politics 4.Art 5.Anime 6.Literature 7.Gender</rdfs:comment>
     </owl:Class>
     
 
@@ -358,28 +675,112 @@
     
 
 
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#InternetPrivacy101 -->
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GH001 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#InternetPrivacy101">
-        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#SciencePanelSession"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GH001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GuestOfHonourPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robin Hobb</name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robin Hobb</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Steve_Macdonald -->
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GH002 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Steve_Macdonald">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GH002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GuestOfHonourPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Clute</name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Clute</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GH003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GH003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GuestOfHonourPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</gender>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lain M Banks</name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lain M Banks</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#JIE_CAO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#JIE_CAO">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#AuthorPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+        <hasEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jc3g15@soton.ac.uk</hasEmail>
+        <hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27510964</hasID>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JIE CAO</name>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This instance is the author of the ontology. It has name, e-mail, gender and studentID.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jie Cao</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Pill_Huggins -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Pill_Huggins">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#MaleParticipantPerson"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ModeratorPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ParticipantPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pill Huggins</name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pill Huggins</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#academic001 -->
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#build001 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#academic001">
-        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#AcademicProgramme"/>
-        <hasScheduledDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-15T11:00:00</hasScheduledDate>
-        <hasTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sherlock Holmes and Science Fiction</hasTitle>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#build001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#BuildingLocation"/>
+        <hasLocName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Auditorium</hasLocName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#build002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#build002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#BuildingLocation"/>
+        <hasLocName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capital Hall</hasLocName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#build003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#build003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#BuildingLocation"/>
+        <hasLocName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capital Lounge</hasLocName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#build004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#build004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#BuildingLocation"/>
+        <hasLocName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capital Suite</hasLocName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#build005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#build005">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#BuildingLocation"/>
+        <hasLocName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">London Suite</hasLocName>
     </owl:NamedIndividual>
     
 
@@ -388,8 +789,19 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#film001">
         <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FilmScreeningProgramme"/>
-        <hasScheduledDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-15T22:00:00</hasScheduledDate>
-        <hasTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beyond</hasTitle>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ScreeningProgramme"/>
+        <hasBuilding rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#build001"/>
+        <hasFloor rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#level_0"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par001"/>
+        <hasRoom rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room001"/>
+        <inTrack rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr001"/>
+        <inTrack rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr002"/>
+        <inTrack rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr003"/>
+        <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-16T21:00:00</hasDate>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</hasDuration>
+        <hasTitleP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">After The Dark</hasTitleP>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">After The Dark</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -398,8 +810,19 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#film002">
         <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FilmScreeningProgramme"/>
-        <hasScheduledDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-14T24:00:00</hasScheduledDate>
-        <hasTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">War Of The Worlds-Goliath</hasTitle>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ScreeningProgramme"/>
+        <hasBuilding rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#build002"/>
+        <hasFloor rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#level_1"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par001"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par002"/>
+        <hasRoom rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room002"/>
+        <inTrack rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr001"/>
+        <inTrack rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr002"/>
+        <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-17T21:00:00</hasDate>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</hasDuration>
+        <hasTitleP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alien Abduction</hasTitleP>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alien Abduction</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -408,15 +831,564 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#film003">
         <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FilmScreeningProgramme"/>
-        <hasScheduledDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-15T11:00:00</hasScheduledDate>
-        <hasTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suicide or Lulu and Me in a World Made for Two</hasTitle>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ScreeningProgramme"/>
+        <hasBuilding rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#build003"/>
+        <hasFloor rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#level_2"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par001"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par002"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par003"/>
+        <hasRoom rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room003"/>
+        <inTrack rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr001"/>
+        <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-15T22:00:00</hasDate>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</hasDuration>
+        <hasTitleP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beyond</hasTitleP>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beyond</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#15_08_2014 -->
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#film004 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#15_08_2014"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#film004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FilmScreeningProgramme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ScreeningProgramme"/>
+        <hasBuilding rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#build004"/>
+        <hasFloor rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#level_3"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Pill_Huggins"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par004"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par005"/>
+        <hasPerson rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Pill_Huggins"/>
+        <hasPerson rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par004"/>
+        <hasPerson rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par005"/>
+        <hasRoom rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room004"/>
+        <inTrack rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr001"/>
+        <inTrack rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr003"/>
+        <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-16T23:00:00</hasDate>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</hasDuration>
+        <hasTitleP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cycle</hasTitleP>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cycle</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#film005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#film005">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FilmScreeningProgramme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ScreeningProgramme"/>
+        <hasBuilding rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#build005"/>
+        <hasFloor rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#level_0"/>
+        <hasModerator rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#mdrt004"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Pill_Huggins"/>
+        <hasRoom rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room005"/>
+        <inTrack rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr006"/>
+        <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-14T20:00:00</hasDate>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">97</hasDuration>
+        <hasTitleP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Future My Love</hasTitleP>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Future My Love</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#film006 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#film006">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FilmScreeningProgramme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ScreeningProgramme"/>
+        <hasBuilding rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#build002"/>
+        <hasFloor rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#level_2"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par004"/>
+        <hasPerson rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par004"/>
+        <hasRoom rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room007"/>
+        <inTrack rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr006"/>
+        <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-16T19:00:00</hasDate>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</hasDuration>
+        <hasTitleP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Search For Simon</hasTitleP>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Search For Simon</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#film007 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#film007">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FilmScreeningProgramme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ScreeningProgramme"/>
+        <hasBuilding rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#build001"/>
+        <hasFloor rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#level_1"/>
+        <hasGuestOfHonour rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GH002"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par005"/>
+        <hasPerson rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par005"/>
+        <hasRoom rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room006"/>
+        <inTrack rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr006"/>
+        <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-17T19:00:00</hasDate>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">94</hasDuration>
+        <hasTitleP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LFO: THE MOVIE</hasTitleP>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LFO: THE MOVIE</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#level_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#level_0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FloorLocation"/>
+        <hasLocName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Level 0</hasLocName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#level_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#level_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FloorLocation"/>
+        <hasLocName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Level 1</hasLocName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#level_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#level_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FloorLocation"/>
+        <hasLocName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Level 2</hasLocName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#level_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#level_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FloorLocation"/>
+        <hasLocName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Level 3</hasLocName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#mdrt001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#mdrt001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ModeratorPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</gender>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ramez Naam</name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ramez Naam</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#mdrt002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#mdrt002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ModeratorPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leo Adams</name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leo Adams</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#mdrt003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#mdrt003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ModeratorPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</gender>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liz Batty</name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liz Batty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#mdrt004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#mdrt004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ModeratorPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tom Becker</name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tom Becker</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#paly002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#paly002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#PlayProgramme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-16T18:00:00</hasDate>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</hasDuration>
+        <hasTitleP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Terminal Zone</hasTitleP>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Terminal Zone</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#panel001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#panel001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#PanelSessionProgramme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <hasModerator rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#mdrt001"/>
+        <hasModerator rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#mdrt004"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Pill_Huggins"/>
+        <inTrack rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr002"/>
+        <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-14T11:00:00</hasDate>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</hasDuration>
+        <hasTitleP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Internet Provacy 101</hasTitleP>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Internet Provacy 101</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#panel002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#panel002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#PanelSessionProgramme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <hasModerator rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#mdrt002"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par002"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par003"/>
+        <inTrack rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr002"/>
+        <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-14T11:00:00</hasDate>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</hasDuration>
+        <hasTitleP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reimagining Families</hasTitleP>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reimagining Families</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#panel003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#panel003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#PanelSessionProgramme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <hasModerator rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#mdrt003"/>
+        <inTrack rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr002"/>
+        <inTrack rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr004"/>
+        <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-14T15:00:00</hasDate>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</hasDuration>
+        <hasTitleP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Speculative Biology</hasTitleP>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Speculative Biology</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#panel004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#panel004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#PanelSessionProgramme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par002"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par003"/>
+        <inTrack rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr006"/>
+        <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-16T21:00:00</hasDate>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</hasDuration>
+        <hasTitleP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">You Write Pretty</hasTitleP>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">You Write Pretty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#panel005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#panel005">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#PanelSessionProgramme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <hasModerator rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Pill_Huggins"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Pill_Huggins"/>
+        <inTrack rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr006"/>
+        <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-16T20:00:00</hasDate>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">78</hasDuration>
+        <hasTitleP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Singularity for the Rest of Us</hasTitleP>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Singularity for the Rest of Us</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FemaleParticipantPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ParticipantPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</gender>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sara Cole</name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sara Cole</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#MaleParticipantPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ParticipantPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrew Bayes</name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrew Bayes</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FemaleParticipantPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ParticipantPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</gender>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chris Buff</name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chris Buff</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#MaleParticipantPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ParticipantPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles Stross</name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles Stross</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par005">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FemaleParticipantPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ParticipantPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Person"/>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</gender>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Clements</name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Clements</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#play001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#play001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#PlayProgramme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-15T15:30:00</hasDate>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</hasDuration>
+        <hasTitleP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mastermind</hasTitleP>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mastermind</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#read001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#read001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ReadingProgramme"/>
+        <hasGuestOfHonour rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GH001"/>
+        <inTrack rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr005"/>
+        <inTrack rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr006"/>
+        <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-18T10:00:00</hasDate>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hasDuration>
+        <hasTitleP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reading: Robin Hobb</hasTitleP>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reading: Robin Hobb</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#read002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#read002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ReadingProgramme"/>
+        <hasModerator rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#mdrt001"/>
+        <inTrack rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr003"/>
+        <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-17T15:00:00</hasDate>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hasDuration>
+        <hasTitleP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reading: Charles Stross</hasTitleP>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reading: Charles Stross</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#RoomLocation"/>
+        <hasLocName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room 001</hasLocName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#RoomLocation"/>
+        <hasLocName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room 002</hasLocName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#RoomLocation"/>
+        <hasLocName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room 003</hasLocName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#RoomLocation"/>
+        <hasLocName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room 004</hasLocName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room005">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#RoomLocation"/>
+        <hasLocName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room 005</hasLocName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room006 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room006">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#RoomLocation"/>
+        <hasLocName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room 006</hasLocName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room007 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room007">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#RoomLocation"/>
+        <hasLocName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room 007</hasLocName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room008 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#room008">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#RoomLocation"/>
+        <hasLocName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room 008</hasLocName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Track"/>
+        <hasTitleT rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Academic</hasTitleT>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Academic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Track"/>
+        <hasTitleT rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Science</hasTitleT>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Science</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Track"/>
+        <hasTitleT rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Politics</hasTitleT>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Politics</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Track"/>
+        <hasTitleT rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Art</hasTitleT>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Art</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr005">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Track"/>
+        <hasTitleT rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anime</hasTitleT>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anime</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr006 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr006">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Track"/>
+        <hasTitleT rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Literature</hasTitleT>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Literature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr007 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr007">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Track"/>
+        <hasTitleT rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gender</hasTitleT>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gender</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tv001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tv001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ScreeningProgramme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#TVScreeningProgramme"/>
+        <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-14T13:30:00</hasDate>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</hasDuration>
+        <hasTitleP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">My Science Fiction Life</hasTitleP>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">My Science Fiction Life</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tv002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tv002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Programme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ScreeningProgramme"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#TVScreeningProgramme"/>
+        <hasDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-16T23:00:00</hasDate>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</hasDuration>
+        <hasTitleP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yonderland</hasTitleP>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yonderland</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
@@ -431,25 +1403,9 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#AcademicProgramme"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ArtProgramme"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ComicsProgramme"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#CostumingProgramme"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ExhibitsProgramme"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FanProgramme"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FilkProgramme"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FilmScreeningProgramme"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GamingProgramme"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#MediaProgramme"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#MusicProgramme"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#PanelSessionProgramme"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#PlayProgramme"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ReadingProgramme"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#ScienceProgramme"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#TVScreeningProgramme"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#WOOFAProgramme"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#WorkshopProgramme"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#YoungAdultProgramme"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#BuildingLocation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#FloorLocation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#RoomLocation"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -461,9 +1417,43 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Track"/>
         </owl:members>
     </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#GH001"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#film001"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#film002"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#film003"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#film004"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#mdrt001"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#mdrt002"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#mdrt003"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#mdrt004"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#panel001"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#panel002"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#panel003"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#read001"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr001"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr002"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr003"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr004"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#tr005"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#Pill_Huggins"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par001"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par002"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par003"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par004"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#par005"/>
+        </owl:distinctMembers>
+    </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.1.20160306-0033) https://github.com/owlcs/owlapi -->
 

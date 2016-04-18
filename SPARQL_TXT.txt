@@ -5,17 +5,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX f: <http://www.semanticweb.org/cj/ontologies/2016/2/Ontology1456999826312.owl#>
 
 # 1 Where are the film screenings that are scheduled on Saturday 15th August 2014?
-SELECT ?title ?date ?buildingName ?floorName ?roomName
+SELECT ?film ?title ?date
 WHERE { 
 	?film rdf:type f:FilmScreeningProgramme .
 	?film f:hasTitleP ?title .
 	?film f:hasDate ?date .
-	?film f:hasBuilding ?building .
-	?building f:hasLocName ?buildingName .
-	?film f:hasFloor ?floor .
-	?floor f:hasLocName ?floorName .
-	?film f:hasRoom ?room .
-	?room f:hasLocName ?roomName .
 	FILTER (?date > "2014-08-15T00:00:00"^^xsd:dateTime && 
 		?date <= "2014-08-16T00:00:00"^^xsd:dateTime)
 }
